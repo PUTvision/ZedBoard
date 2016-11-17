@@ -141,8 +141,8 @@ _package-headers() {
   done
 
   # copy arch includes for external modules
-  mkdir -p ${pkgdir}/usr/src/linux-${_kernver}/arch/$KARCH
-  cp -a arch/$KARCH/include ${pkgdir}/usr/src/linux-${_kernver}/arch/$KARCH/
+  mkdir -p ${pkgdir}/usr/lib/modules/${_kernver}/build/arch/$KARCH
+  cp -a arch/$KARCH/include ${pkgdir}/usr/lib/modules/${_kernver}/build/arch/$KARCH/
 
   # copy files necessary for later builds, like nvidia and vmware
   cp Module.symvers "${pkgdir}/usr/lib/modules/${_kernver}/build"
